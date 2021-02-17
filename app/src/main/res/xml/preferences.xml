@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="pref_autoreproducir"
+        android:title="Reproducir automaticamente"
+        android:summary="El audio inicia automaticamente"
+        android:defaultValue="true" />
+
+    <CheckBoxPreference
+        android:dependency="pref_autoreproducir"
+        android:layout="?android:attr/preferenceLayoutChild"
+        android:title="Otra preferencia"
+        android:summary="Ejemplo de checkbo" />
+
+    <PreferenceScreen
+        android:title="Informacion adicional"
+        android:summary="Visualizacion de web">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://itsur.edu.mx/"/>
+    </PreferenceScreen>
+
+</PreferenceScreen>
